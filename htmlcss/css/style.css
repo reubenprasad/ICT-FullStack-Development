@@ -8,3 +8,7 @@
 body{
     background :url('../jarmanbluetmdisplay.jpg');
 }
+.test{
+    border: solid black 5px;
+    margin-top: 200px;
+}
