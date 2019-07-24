@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <script>
+    function getName()
+    {
+        var x = document.getElementById("myname").value;
+        document.getElementById("pid").innerHTML = x;
+    }
+    </script>
+
+</head>
+<body background="bg-secondary">
+    <form>
+    <div class="container">
+        <div class="row" style="margin: 15%; border: solid black">
+            <div class="col">
+                <p>Enter your name</p>
+            </div>
+            <div class="col form-control"><input type="text" id="myname"> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"><button type="button" class="btn btn-primary" onclick="getName()">Submit</button></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p id="pid"></p>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
