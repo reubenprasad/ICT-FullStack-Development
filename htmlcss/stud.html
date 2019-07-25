@@ -6,37 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
+    <script>
+    function getInfo()
+    {
+        document.getElementById("dtab").style.visibility = "visible"; 
+        var xname = document.getElementById("Name").value;
+        document.getElementById("Dname").innerHTML = xname;
+        var xbranch =document.getElementById("Branch").value;
+        document.getElementById("DBranch").innerHTML = xbranch;
+        var xdob = document.getElementById("Dob").value;
+        document.getElementById("Ddob").innerHTML = xdob;
+        var xage = document.getElementById("Age").value;
+        document.getElementById("Dage").innerHTML = xage;
+        if (document.getElementById("r1").checked) 
+         {
+               document.getElementById("Dgen").innerHTML = document.getElementById("r1").value;
+               
+         }
+         if (document.getElementById("r2").checked) 
+         {
+            document.getElementById("Dgen").innerHTML = document.getElementById("r2").value;
+         }
+    }
+    </script>
 </head>
 <body>
-    <Table>
+    <form id="test">
+    <Table class="table">
         <tr>
             <td>Name</td>
-            <td><input type="text" class="form-control"></td>
+            <td><input type="text" class="form-control" id="Name"></td>
         </tr>
 
         <tr>
             <td>Branch</td>
-            <td><select>
-                <option>Computer Science</option>
-                <option>Electrical</option>
-                <option>Electronics</option>
+            <td><select id="Branch">
+                <option value="Computer-Science">Computer Science</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Electronics">Electronics</option>
             </select></td>
         </tr>
 
         <tr>
             <td>Date of Birth</td>
-            <td><input type="date" class="form-control"></td>
+            <td><input type="date" class="form-control" id="Dob"></td>
         </tr>
 
         <tr>
             <td>Age</td>
-            <td><input type="number" min='0' max='75' class="form-control"></td>
+            <td><input type="number" min='0' max='75' class="form-control" id="Age"></td>
         </tr>
                 
         <tr>
             <td>Gender</td>
-            <td><input type="radio" name="gen" class="form-control">Male
-            <input type="radio" name="gen" class="form-control">Female
+            <td><input type="radio" name="gen" class="form-control" value="Male" id="r1">Male
+            <input type="radio" name="gen" class="form-control" value="Female" id="r2">Female
             </td>
         </tr>
 
@@ -46,8 +70,37 @@
         </tr>
         <tr>
             <td></td>
-            <td><button class="btn btn-success">Submit</button></td>
+            <td><button class="btn btn-success" type="button" onclick="getInfo()">Submit</button></td>
         </tr>
     </Table>
+    </form>
+    <table class="table" style="visibility: hidden" id="dtab">
+        <thead class="thead-dark">
+            <th>User Data</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td id="Dname"></td>
+            </tr>
+            <tr>
+                <td>Branch</td>
+                <td id="DBranch"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td id="Ddob"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td id="Dage"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="Dgen"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

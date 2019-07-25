@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    
+    <script>
+    function getInfo()
+        {
+            document.getElementById("dtab").style.visibility = "visible"; 
+            var x = document.getElementById("Uname").value;
+            document.getElementById("Duname").innerHTML = x;
+            var y = document.getElementById("Pass").value;
+            document.getElementById("Dpass").innerHTML = y;
+
+        }
+    </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -15,7 +25,7 @@
                         Username :
                     </td>
                     <td>
-                        <input type="text">
+                        <input type="text" id ="Uname">
                     </td>
                 </tr>
                 <tr>
@@ -23,15 +33,32 @@
                         Password :
                     </td>
                     <td>
-                        <input type="password">
+                        <input type="password" id="Pass">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <button>Login</button>
+                        <button type="button" onclick="getInfo()" class="btn btn-success">Login</button>
                     </td>
                 </tr>
+                
+            </table>
+            <table class="table" style="visibility: hidden" id="dtab">
+            <thead class="thead-dark">
+                <th>User Data</th>
+                <th></th>
+            </thead>
+            <tbody>
+                    <tr>
+                            <td>Username</td>                        
+                            <td id="Duname"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td id="Dpass"></td>
+                    </tr>
+            </tbody>
             </table>
 </body>
 </html>

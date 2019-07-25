@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+      function checkNum()
+        {
+            var x = document.getElementById("num").value;
+            if(x%2 == 0)
+                {
+                document.getElementById("dp").innerHTML = "The number is even";
+                }
+            else
+                {
+                    document.getElementById("dp").innerHTML = "The number is odd";
+                }
+        }
+    </script>
+    <style>
+    .cp{
+           font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+            <th>Check if a Number is odd or even</th>
+            <th></th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Enter the number</td>
+            <td><input type="number" id="num"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" onclick="checkNum()" class="btn btn-info">Check</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <center><p id="dp" class="text-info cp"></p></center> 
+</body>
+</html>
