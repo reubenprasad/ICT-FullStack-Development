@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#sm").dblclick(function(){
+                $('h1').show();
+            });
+            $("#hm").click(function(){
+                $('h1').hide(5000);
+            });
+            $('h1').click(function(){
+                $(this).css("background-color", "yellow");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <td style="text-align: center"><button id="sm" class="btn btn-success">Show me</button></td>
+            <td style="text-align: center"><button id="hm" class="btn btn-danger">Hide me</button></td>
+        </tr>
+    </table>
+    <h1 style="text-align: center;color: blue">Sample Text</h1>
+
+</body>
+</html>
